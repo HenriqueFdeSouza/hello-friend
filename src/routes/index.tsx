@@ -129,7 +129,12 @@ function Page() {
   });
 
   const criticalSystems = SYSTEMS.map((def) => ({ def, entry: activeReport.systems[def.key] }))
-    .filter((s) => s.entry && s.entry.applicable !== false && s.entry.status !== "C")
+    .filter(
+      (s) =>
+        s.entry &&
+        s.entry.applicable !== false &&
+        (s.entry.status === "PC" || s.entry.status === "NC"),
+    )
     .slice(0, 6);
 
   return (
@@ -219,7 +224,7 @@ function Page() {
           }
         >
           {criticalSystems.length === 0 ? (
-            <EmptyState text="Todos os sistemas aplicáveis estão conformes." />
+            <EmptyState text="Nenhum sistema com pendência de conformidade registrada." />
           ) : (
             <ul className="divide-y divide-border">
               {criticalSystems.map(({ def, entry }) => (
