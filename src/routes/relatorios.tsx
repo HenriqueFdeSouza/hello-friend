@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { Copy, FilePlus2, FileText, Trash2 } from "lucide-react";
 import { useState } from "react";
 
@@ -67,8 +67,10 @@ function Page() {
         subtitle="Gestão dos relatórios técnicos mensais por unidade"
         actions={
           activeReport ? (
-            <Button variant="outline" onClick={() => window.print()}>
-              <FileText className="size-4" /> Gerar PDF do relatório ativo
+            <Button variant="outline" asChild>
+              <Link to="/relatorio-pdf">
+                <FileText className="size-4" /> Gerar PDF do relatório ativo
+              </Link>
             </Button>
           ) : null
         }

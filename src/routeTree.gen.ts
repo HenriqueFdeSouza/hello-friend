@@ -20,6 +20,7 @@ import { Route as InspecoesRouteImport } from './routes/inspecoes'
 import { Route as InventarioRouteImport } from './routes/inventario'
 import { Route as OcorrenciasRouteImport } from './routes/ocorrencias'
 import { Route as PlanoAcaoRouteImport } from './routes/plano-acao'
+import { Route as RelatorioPdfRouteImport } from './routes/relatorio-pdf'
 import { Route as RelatoriosRouteImport } from './routes/relatorios'
 import { Route as TestesRouteImport } from './routes/testes'
 import { Route as TreinamentosRouteImport } from './routes/treinamentos'
@@ -81,6 +82,11 @@ const PlanoAcaoRoute = PlanoAcaoRouteImport.update({
   path: '/plano-acao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RelatorioPdfRoute = RelatorioPdfRouteImport.update({
+  id: '/relatorio-pdf',
+  path: '/relatorio-pdf',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RelatoriosRoute = RelatoriosRouteImport.update({
   id: '/relatorios',
   path: '/relatorios',
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/inventario': typeof InventarioRoute
   '/ocorrencias': typeof OcorrenciasRoute
   '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
   '/relatorios': typeof RelatoriosRoute
   '/testes': typeof TestesRoute
   '/treinamentos': typeof TreinamentosRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/inventario': typeof InventarioRoute
   '/ocorrencias': typeof OcorrenciasRoute
   '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
   '/relatorios': typeof RelatoriosRoute
   '/testes': typeof TestesRoute
   '/treinamentos': typeof TreinamentosRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/inventario': typeof InventarioRoute
   '/ocorrencias': typeof OcorrenciasRoute
   '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
   '/relatorios': typeof RelatoriosRoute
   '/testes': typeof TestesRoute
   '/treinamentos': typeof TreinamentosRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
     | '/inventario'
     | '/ocorrencias'
     | '/plano-acao'
+    | '/relatorio-pdf'
     | '/relatorios'
     | '/testes'
     | '/treinamentos'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
     | '/inventario'
     | '/ocorrencias'
     | '/plano-acao'
+    | '/relatorio-pdf'
     | '/relatorios'
     | '/testes'
     | '/treinamentos'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/inventario'
     | '/ocorrencias'
     | '/plano-acao'
+    | '/relatorio-pdf'
     | '/relatorios'
     | '/testes'
     | '/treinamentos'
@@ -231,6 +243,7 @@ export interface RootRouteChildren {
   InventarioRoute: typeof InventarioRoute
   OcorrenciasRoute: typeof OcorrenciasRoute
   PlanoAcaoRoute: typeof PlanoAcaoRoute
+  RelatorioPdfRoute: typeof RelatorioPdfRoute
   RelatoriosRoute: typeof RelatoriosRoute
   TestesRoute: typeof TestesRoute
   TreinamentosRoute: typeof TreinamentosRoute
@@ -317,6 +330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlanoAcaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/relatorio-pdf': {
+      id: '/relatorio-pdf'
+      path: '/relatorio-pdf'
+      fullPath: '/relatorio-pdf'
+      preLoaderRoute: typeof RelatorioPdfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/relatorios': {
       id: '/relatorios'
       path: '/relatorios'
@@ -367,6 +387,7 @@ const rootRouteChildren: RootRouteChildren = {
   InventarioRoute: InventarioRoute,
   OcorrenciasRoute: OcorrenciasRoute,
   PlanoAcaoRoute: PlanoAcaoRoute,
+  RelatorioPdfRoute: RelatorioPdfRoute,
   RelatoriosRoute: RelatoriosRoute,
   TestesRoute: TestesRoute,
   TreinamentosRoute: TreinamentosRoute,

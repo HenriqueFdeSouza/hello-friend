@@ -149,8 +149,10 @@ function Page() {
                 <FileText className="size-4" /> Relatórios
               </Link>
             </Button>
-            <Button onClick={() => window.print()}>
-              <FileText className="size-4" /> Gerar PDF
+            <Button asChild>
+              <Link to="/relatorio-pdf">
+                <FileText className="size-4" /> Gerar PDF
+              </Link>
             </Button>
           </div>
         }
