@@ -10,33 +10,245 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AtividadesRouteImport } from './routes/atividades'
+import { Route as BrigadaRouteImport } from './routes/brigada'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as DocumentacaoRouteImport } from './routes/documentacao'
+import { Route as FotosRouteImport } from './routes/fotos'
+import { Route as IndicadoresRouteImport } from './routes/indicadores'
+import { Route as InspecoesRouteImport } from './routes/inspecoes'
+import { Route as InventarioRouteImport } from './routes/inventario'
+import { Route as OcorrenciasRouteImport } from './routes/ocorrencias'
+import { Route as PlanoAcaoRouteImport } from './routes/plano-acao'
+import { Route as RelatorioPdfRouteImport } from './routes/relatorio-pdf'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as TestesRouteImport } from './routes/testes'
+import { Route as TreinamentosRouteImport } from './routes/treinamentos'
+import { Route as SistemasIndexRouteImport } from './routes/sistemas.index'
+import { Route as SistemasKeyRouteImport } from './routes/sistemas.$key'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtividadesRoute = AtividadesRouteImport.update({
+  id: '/atividades',
+  path: '/atividades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrigadaRoute = BrigadaRouteImport.update({
+  id: '/brigada',
+  path: '/brigada',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentacaoRoute = DocumentacaoRouteImport.update({
+  id: '/documentacao',
+  path: '/documentacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FotosRoute = FotosRouteImport.update({
+  id: '/fotos',
+  path: '/fotos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndicadoresRoute = IndicadoresRouteImport.update({
+  id: '/indicadores',
+  path: '/indicadores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InspecoesRoute = InspecoesRouteImport.update({
+  id: '/inspecoes',
+  path: '/inspecoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InventarioRoute = InventarioRouteImport.update({
+  id: '/inventario',
+  path: '/inventario',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OcorrenciasRoute = OcorrenciasRouteImport.update({
+  id: '/ocorrencias',
+  path: '/ocorrencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanoAcaoRoute = PlanoAcaoRouteImport.update({
+  id: '/plano-acao',
+  path: '/plano-acao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatorioPdfRoute = RelatorioPdfRouteImport.update({
+  id: '/relatorio-pdf',
+  path: '/relatorio-pdf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TestesRoute = TestesRouteImport.update({
+  id: '/testes',
+  path: '/testes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TreinamentosRoute = TreinamentosRouteImport.update({
+  id: '/treinamentos',
+  path: '/treinamentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SistemasIndexRoute = SistemasIndexRouteImport.update({
+  id: '/sistemas/',
+  path: '/sistemas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SistemasKeyRoute = SistemasKeyRouteImport.update({
+  id: '/sistemas/$key',
+  path: '/sistemas/$key',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atividades': typeof AtividadesRoute
+  '/brigada': typeof BrigadaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/documentacao': typeof DocumentacaoRoute
+  '/fotos': typeof FotosRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/inspecoes': typeof InspecoesRoute
+  '/inventario': typeof InventarioRoute
+  '/ocorrencias': typeof OcorrenciasRoute
+  '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/testes': typeof TestesRoute
+  '/treinamentos': typeof TreinamentosRoute
+  '/sistemas/$key': typeof SistemasKeyRoute
+  '/sistemas/': typeof SistemasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atividades': typeof AtividadesRoute
+  '/brigada': typeof BrigadaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/documentacao': typeof DocumentacaoRoute
+  '/fotos': typeof FotosRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/inspecoes': typeof InspecoesRoute
+  '/inventario': typeof InventarioRoute
+  '/ocorrencias': typeof OcorrenciasRoute
+  '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/testes': typeof TestesRoute
+  '/treinamentos': typeof TreinamentosRoute
+  '/sistemas/$key': typeof SistemasKeyRoute
+  '/sistemas': typeof SistemasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atividades': typeof AtividadesRoute
+  '/brigada': typeof BrigadaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/documentacao': typeof DocumentacaoRoute
+  '/fotos': typeof FotosRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/inspecoes': typeof InspecoesRoute
+  '/inventario': typeof InventarioRoute
+  '/ocorrencias': typeof OcorrenciasRoute
+  '/plano-acao': typeof PlanoAcaoRoute
+  '/relatorio-pdf': typeof RelatorioPdfRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/testes': typeof TestesRoute
+  '/treinamentos': typeof TreinamentosRoute
+  '/sistemas/$key': typeof SistemasKeyRoute
+  '/sistemas/': typeof SistemasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/atividades'
+    | '/brigada'
+    | '/configuracoes'
+    | '/documentacao'
+    | '/fotos'
+    | '/indicadores'
+    | '/inspecoes'
+    | '/inventario'
+    | '/ocorrencias'
+    | '/plano-acao'
+    | '/relatorio-pdf'
+    | '/relatorios'
+    | '/testes'
+    | '/treinamentos'
+    | '/sistemas/$key'
+    | '/sistemas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/atividades'
+    | '/brigada'
+    | '/configuracoes'
+    | '/documentacao'
+    | '/fotos'
+    | '/indicadores'
+    | '/inspecoes'
+    | '/inventario'
+    | '/ocorrencias'
+    | '/plano-acao'
+    | '/relatorio-pdf'
+    | '/relatorios'
+    | '/testes'
+    | '/treinamentos'
+    | '/sistemas/$key'
+    | '/sistemas'
+  id:
+    | '__root__'
+    | '/'
+    | '/atividades'
+    | '/brigada'
+    | '/configuracoes'
+    | '/documentacao'
+    | '/fotos'
+    | '/indicadores'
+    | '/inspecoes'
+    | '/inventario'
+    | '/ocorrencias'
+    | '/plano-acao'
+    | '/relatorio-pdf'
+    | '/relatorios'
+    | '/testes'
+    | '/treinamentos'
+    | '/sistemas/$key'
+    | '/sistemas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtividadesRoute: typeof AtividadesRoute
+  BrigadaRoute: typeof BrigadaRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
+  DocumentacaoRoute: typeof DocumentacaoRoute
+  FotosRoute: typeof FotosRoute
+  IndicadoresRoute: typeof IndicadoresRoute
+  InspecoesRoute: typeof InspecoesRoute
+  InventarioRoute: typeof InventarioRoute
+  OcorrenciasRoute: typeof OcorrenciasRoute
+  PlanoAcaoRoute: typeof PlanoAcaoRoute
+  RelatorioPdfRoute: typeof RelatorioPdfRoute
+  RelatoriosRoute: typeof RelatoriosRoute
+  TestesRoute: typeof TestesRoute
+  TreinamentosRoute: typeof TreinamentosRoute
+  SistemasKeyRoute: typeof SistemasKeyRoute
+  SistemasIndexRoute: typeof SistemasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +260,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atividades': {
+      id: '/atividades'
+      path: '/atividades'
+      fullPath: '/atividades'
+      preLoaderRoute: typeof AtividadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brigada': {
+      id: '/brigada'
+      path: '/brigada'
+      fullPath: '/brigada'
+      preLoaderRoute: typeof BrigadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documentacao': {
+      id: '/documentacao'
+      path: '/documentacao'
+      fullPath: '/documentacao'
+      preLoaderRoute: typeof DocumentacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fotos': {
+      id: '/fotos'
+      path: '/fotos'
+      fullPath: '/fotos'
+      preLoaderRoute: typeof FotosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/indicadores': {
+      id: '/indicadores'
+      path: '/indicadores'
+      fullPath: '/indicadores'
+      preLoaderRoute: typeof IndicadoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inspecoes': {
+      id: '/inspecoes'
+      path: '/inspecoes'
+      fullPath: '/inspecoes'
+      preLoaderRoute: typeof InspecoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inventario': {
+      id: '/inventario'
+      path: '/inventario'
+      fullPath: '/inventario'
+      preLoaderRoute: typeof InventarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ocorrencias': {
+      id: '/ocorrencias'
+      path: '/ocorrencias'
+      fullPath: '/ocorrencias'
+      preLoaderRoute: typeof OcorrenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plano-acao': {
+      id: '/plano-acao'
+      path: '/plano-acao'
+      fullPath: '/plano-acao'
+      preLoaderRoute: typeof PlanoAcaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorio-pdf': {
+      id: '/relatorio-pdf'
+      path: '/relatorio-pdf'
+      fullPath: '/relatorio-pdf'
+      preLoaderRoute: typeof RelatorioPdfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/testes': {
+      id: '/testes'
+      path: '/testes'
+      fullPath: '/testes'
+      preLoaderRoute: typeof TestesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/treinamentos': {
+      id: '/treinamentos'
+      path: '/treinamentos'
+      fullPath: '/treinamentos'
+      preLoaderRoute: typeof TreinamentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistemas/': {
+      id: '/sistemas/'
+      path: '/sistemas'
+      fullPath: '/sistemas/'
+      preLoaderRoute: typeof SistemasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sistemas/$key': {
+      id: '/sistemas/$key'
+      path: '/sistemas/$key'
+      fullPath: '/sistemas/$key'
+      preLoaderRoute: typeof SistemasKeyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtividadesRoute: AtividadesRoute,
+  BrigadaRoute: BrigadaRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
+  DocumentacaoRoute: DocumentacaoRoute,
+  FotosRoute: FotosRoute,
+  IndicadoresRoute: IndicadoresRoute,
+  InspecoesRoute: InspecoesRoute,
+  InventarioRoute: InventarioRoute,
+  OcorrenciasRoute: OcorrenciasRoute,
+  PlanoAcaoRoute: PlanoAcaoRoute,
+  RelatorioPdfRoute: RelatorioPdfRoute,
+  RelatoriosRoute: RelatoriosRoute,
+  TestesRoute: TestesRoute,
+  TreinamentosRoute: TreinamentosRoute,
+  SistemasKeyRoute: SistemasKeyRoute,
+  SistemasIndexRoute: SistemasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
